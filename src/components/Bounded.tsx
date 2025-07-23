@@ -9,15 +9,15 @@ type BoundedProps<T extends ElementType = "section"> = {
   style?: CSSProperties;
 } & ComponentPropsWithRef<T>;
 
-export function Bounded({
+export function Bounded<T extends ElementType = "section">({
   as,
   className,
   id,
   children,
   ...restProps
-}: BoundedProps) {
+}: BoundedProps<T>) {
   const Comp = as || "section";
-  
+
   return (
     <Comp
       className={clsx(
