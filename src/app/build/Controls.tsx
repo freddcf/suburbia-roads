@@ -183,7 +183,7 @@ function Option({
         ) : (
           <div
             className="h-full w-full rounded-full"
-            style={{ backgroundColor: colorField ?? undefined }}
+            style={{ backgroundColor: colorField ?? undefined, "--index": 0, }}
           />
         )}
 

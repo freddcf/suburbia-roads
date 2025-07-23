@@ -33,6 +33,7 @@ type GLTFResult = GLTF & {
     Truck1: THREE.Mesh;
     Truck2: THREE.Mesh;
   };
+  materials: object
 };
 
 export function Skateboard({
