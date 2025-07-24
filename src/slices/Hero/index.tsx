@@ -46,7 +46,7 @@ const Hero: FC<HeroProps> = async ({ slice }) => {
           SUBURBIA ROADS
         </div>
         <div className="flex relative w-full flex-col items-center justify-between ~gap-2/4 lg:flex-row">
-          <div className="max-w-[45ch] font-semibold ~text-lg/xl">
+          <div className="max-w-[45ch] font-semibold ~text-lg/xl mx-5 md:mx-0">
             <PrismicRichText field={slice.primary.body} />
           </div>
           <ButtonLink
