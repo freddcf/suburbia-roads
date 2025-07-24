@@ -25,7 +25,16 @@ export async function generateMetadata(): Promise<Metadata> {
     title: settings.data.site_title,
     description: settings.data.meta_description,
     openGraph: {
-      images: settings.data.fallback_og_image.url ?? undefined,
+      images: settings.data.fallback_og_image.url
+        ? [
+            {
+              url: settings.data.fallback_og_image.url,
+              width: 1200, // opcional, mas recomendado
+              height: 630, // idem
+              alt: "Imagem de compartilhamento do Suburbia Roads",
+            },
+          ]
+        : undefined,
     },
   };
 }
